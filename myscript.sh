@@ -109,3 +109,48 @@ for NAME in $NAMES
 do
     echo "Hello $NAME"
 done
+
+# FOR LOOP TO RENAME FILE (problem solved if you have a huge file that needs renaming)
+FILES=$(ls *.text)
+NEW="new"
+for FILE in ${FILES}
+    do
+        echo "Renaming ${FILE} to new-${FILE}"
+        mv ${FILE} ${NEW}-${FILE}
+done
+
+
+# WHILE LOOP TO - READ THROUGH  A FILE LINE BY LINE
+
+LINE=1
+while read -r CURRENT_LINE
+    do
+        echo "$LINE: $CURRENT_LINE"
+        ((LINE++))
+done < "./new-test1.text"
+
+
+# FUNCTIONS
+function sayMayang(){
+    echo "yaaaasalam!! Manyang get outta here!"
+}
+
+sayMayang
+
+# FUNCTIONS WITH PARAMS
+
+function wazzzzaa(){
+    echo "ya zol!! I am $1 and I am on this $2 path forever untill i see and exceed $3 $4"
+}
+
+wazzzzaa "broke" "developer" "success" "PERIOD"
+
+
+# USE-CASE TO SOLVE ANY PROBLEM OF DOING REPETITIVE WORK OVER AND OVER
+
+# PROBLEM - CREATE A FOLDER AND WRITE TO A FILE
+mkdir hello
+
+touch "hello/dunia.txt"
+echo "Sallam dunia and nas bet" >> "hello/dunia.txt"
+echo "Created salllam/dunia.txt"
