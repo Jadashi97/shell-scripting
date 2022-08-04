@@ -9,7 +9,7 @@
 # Uppercase by convention 
 # Letters, numbers, underscores
 
-NAME="jabawoki"
+# NAME="jabawoki"
 # echo "My name is, ${NAME}"
 
 
@@ -51,3 +51,37 @@ NAME="jabawoki"
 # val1 -lt val2 Returns true if val1 < val2
 # val1 -le val2 Returns true if val1 <= val2
 ############### 
+
+# NUM1=20
+# NUM2=20
+
+# if [ "${NUM1}" -gt "${NUM2}" ]
+# then
+#     echo "i think you nailed the whole thing!!"
+# elif [ "${NUM1}" -eq "${NUM2}" ]
+# then
+#     echo "please try again dummy!!"
+# fi
+
+###################
+# -d file =True if the file is a directory 
+# -e file =True if the file exists (note that this is not particularly portable, thus -f is generally used)
+# -f file =True if the provided string is a file
+# -g file =True if the group id is set on a file
+# -r file =True if the file is readable
+# -s file =True if the file has a non zero size
+# -u file = True if the user id is set on a file
+# -w file =True if the file is writeable
+# -x file =True if the file is an executable one
+###################
+
+
+# FILE CONDITIONS
+FILE="test.text"
+
+if [ -d "${FILE}" ]
+then
+    echo "I see the file ${FILE}"
+else
+    echo "Naahh you must be dreaming!!"
+fi
