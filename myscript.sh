@@ -10,38 +10,38 @@
 # Letters, numbers, underscores
 
 # NAME="jabawoki"
-# echo "My name is, ${NAME}"
+echo "My name is, ${NAME}"
 
 
 #USER INPUT
-# read -p "Enter your name: " NAME
-# echo "Hello $NAME, nice to meet you!"
+read -p "Enter your name: " NAME
+echo "Hello $NAME, nice to meet you!"
 
 
 #SIMPLE IF STATEMENT
-# if [ "${NAME}" == "Daniel" ]
-# then
-# echo "Your name is Daniel"
-# fi
+if [ "${NAME}" == "Daniel" ]
+then
+echo "Your name is Daniel"
+fi
 
 # IF-ELSE 
-# if [ "${NAME}" == "Daniel" ]
-# then
-#     echo "You are the village Chief!!"
-# else
-#     echo "Come on you are not the village chief!!"
-# fi
+if [ "${NAME}" == "Daniel" ]
+then
+    echo "You are the village Chief!!"
+else
+    echo "Come on you are not the village chief!!"
+fi
 
 #ELSE-IF (elif)
-# if [ "${NAME}" == "Daniel" ]
-# then
-#     echo "You are the real village Chief!!"
-# elif [ "${NAME}" == "Emman" ]
-# then
-#     echo "You are the old and former village Chief!!"
-# else
-#     echo "Come on you are not and have never been the village chief!!"
-# fi
+if [ "${NAME}" == "Daniel" ]
+then
+    echo "You are the real village Chief!!"
+elif [ "${NAME}" == "Emman" ]
+then
+    echo "You are the old and former village Chief!!"
+else
+    echo "Come on you are not and have never been the village chief!!"
+fi
 
 ###############
 # val1 -eq val2 Returns  true if the values are equal
@@ -52,16 +52,16 @@
 # val1 -le val2 Returns true if val1 <= val2
 ############### 
 
-# NUM1=20
-# NUM2=20
+NUM1=20
+NUM2=20
 
-# if [ "${NUM1}" -gt "${NUM2}" ]
-# then
-#     echo "i think you nailed the whole thing!!"
-# elif [ "${NUM1}" -eq "${NUM2}" ]
-# then
-#     echo "please try again dummy!!"
-# fi
+if [ "${NUM1}" -gt "${NUM2}" ]
+then
+    echo "i think you nailed the whole thing!!"
+elif [ "${NUM1}" -eq "${NUM2}" ]
+then
+    echo "please try again dummy!!"
+fi
 
 ###################
 # -d file =True if the file is a directory 
@@ -85,3 +85,27 @@ then
 else
     echo "Naahh you must be dreaming!!"
 fi
+
+
+# CASE STATEMENTS WHILE USING USER INPUT
+read -p "Are you 21 or over? Y/N" ANSWER
+
+# case syntax
+case "${ANSWER}" in 
+    [Yy] | [Yy][eE][sS])
+        echo "You can grab a beer :)"
+        ;;
+    [nN] | [nN][oO])
+        echo "Sorry, No drinking for you my friend"
+        ;;
+    *)
+        echo "Please enter y/yes or no/no" #this is the default case as in js case-switch
+        ;;
+esac #closes out the the case 
+
+#SIMPLE FOR LOOP 
+NAMES="Lokose Daniel Ronald Stephen Winnie Jimmy Toni Tom"
+for NAME in $NAMES
+do
+    echo "Hello $NAME"
+done
