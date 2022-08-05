@@ -1,0 +1,2 @@
+main pluggins web-search, dirhistory, zsh_reload sudo
+main pluggins web-search, dirhistory, zsh_reload sudo
