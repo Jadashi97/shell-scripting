@@ -1,4 +1,5 @@
-#!/bin/sh
+# this is the shebang to initiate the shell
+# !/bin/sh  
 
 
 

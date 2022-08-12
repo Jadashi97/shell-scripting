@@ -1,0 +1,20 @@
+COMMON shell commands
+
+date = gives date 
+whoiam = the user
+ls = lists files
+pwd = prints dir
+mkdir = creates dir
+mv = move files
+rf = remove files
+-r = reads
+ln =
+rm rf = forcefully removes files
+mail = checks mail
+wc (file name) = counts words and characters of  file
+grep <word to look for> <file name> = searches file for the matchng word
+sort = sorts thru files
+pr <file name> = prints files
+cmp = compares files
+tail
+
