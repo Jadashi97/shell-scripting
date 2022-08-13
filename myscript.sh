@@ -51,7 +51,7 @@
 # # val1 -ge val2 Returns true if val1 >= val2
 # # val1 -lt val2 Returns true if val1 < val2
 # # val1 -le val2 Returns true if val1 <= val2
-# ############### 
+# ###############   
 
 # NUM1=20
 # NUM2=20
@@ -162,5 +162,4 @@
 # touch "plugins/zsh-pluggins.txt"
 echo "main pluggins web-search, dirhistory, zsh_reload sudo" >> "plugins/zsh-pluggins.txt"
 echo "Created pluggins for my zsh file"
-
 
