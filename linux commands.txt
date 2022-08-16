@@ -1,0 +1,96 @@
+
+LINUX CHEAT SHEET
+
+
+/bin = shows all linux commands
+/boot = shows all files not being used by the OS, but by the loader
+/etc = shows additional files and programs
+/lib =
+/mnt = mount directory usually reserved for mounting files
+/opt = optional add-on applications
+/root = 
+/sbin = system binaries
+/proc = 
+/tmp = temporary directory
+/home = user directories
+/var = directory for sytem logs 
+cd = change dir
+pwd = print working directory
+ls = list all dirs or files
+
+
+TWO PATHS
+abosule path - begins at the root directory. ="/" e.g (/Users/nyarjijada/shellScripting/plugins)
+relative path - shows the location relative to your path. e.g (plugins/zsh-pluggins.txt)
+
+Directory listing attributes
+"drw" - stands directory
+"lrw" - stands for link
+all the rest are files
+
+FILE CREATION
+- touch
+- cp 
+- vi
+
+mkdir - create directory
+
+Find files and directories
+find 
+locate
+
+WILD CARDS
+* - reps zero or more characters
+? - reps a single character
+[] - reps a range of characters
+\ - escape character
+^ - (caret). reps beginning of a line or it expands the line 
+$ - an end of a line
+
+
+USEFUL commands
+
+"More" - gives one page at a time.
+"Tail" - give you last in the page
+
+PIPES " | " 
+
+This is used by the shell to connect the output of one command directly to the input of another command
+e.g Command [argument] | command2 [arguments]
+cd.  ls- ltr | more        =====> this will give you one page at a time.
+
+FILE PERMISSIONS 
+
+Unix is a multi user system
+Every file and directory in the account can be protected
+
+N  Description              ls              binary 
+0  No permissions           ---              000
+1  Ony execute              --x              001
+2  Only write               -w-              010
+3  write and execute        -wx              011
+4  Only read                r--              100
+5  Read and excute          r-x              101
+6  Read and Write           rw-              110
+7  Read,write and execute   rwx              111
+
+3 Main types of permissions
+
+"r"  -read
+"w"  -Write
+"x"  - excute
+
+
+Each permission can be controlled at 3 diff levels
+
+"u"  - user  => yourself
+"g"  - group => coworkers
+"o"  - other => other everyone else in the system
+
+Example;
+-rw-r--r--  ! dfi303 staff 6049 Mar 9 2020 VOLTAGE.sql
+
+"-" => since it doesnt start with "l" or "d", this mean it is a file
+"rw" => [u] this means the user has read and write access
+"r-" => [g] means group had read on to this file
+"r- " => [o] means others have only
