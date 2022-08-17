@@ -90,7 +90,40 @@ Each permission can be controlled at 3 diff levels
 Example;
 -rw-r--r--  ! dfi303 staff 6049 Mar 9 2020 VOLTAGE.sql
 
-"-" => since it doesnt start with "l" or "d", this mean it is a file
+"-" => since it doesnt start with "l" or "d", this means it is a file
 "rw" => [u] this means the user has read and write access
 "r-" => [g] means group had read on to this file
 "r- " => [o] means others have only
+
+change permission
+
+chmod(change mode) - change the access permission of file systems objects aka modes
+chmod  a-w = remove the write permission to everyone
+chmod  u+w = add the write permission to the users on the file
+chmod a+w file => this will add write to everyone with the file name 
+chmod a+r file =>this will add read to everyone  
+chmod a+x file => this will add executable form for everyone in the file
+chmod a-r File 	=> this will remove read from everyone in the file
+chmod a-wx File	=> this will remove write and executable form for everyone in the file
+chmod o-r File	=> this will remove read to everyone
+
+File Ownership
+
+
+ Two owners for file or directory
+   User
+   Group
+ Command to change file ownership
+   chown  :  change the ownership of a file
+   chgrp   :  changes the group ownership of a file
+
+Question?: Elaborate more here or any other example?
+
+Recursive ownership options (cascade)
+    -R
+
+   rw-r--r--    1 dfi303  staff      6049 Mar  9  2020 VOLTAGE.sql
+ chown  psbatch VOLTAGE.sql
+   rw-r--r--    1 psbatch  staff      6049 Mar  9  2020 VOLTAGE.sql
+ chgrp  psbatch VOLTAGE.sql
+   rw-r--r--    1 dfi303  psbatch     6049 Mar  9  2020 VOLTAGE.sql
