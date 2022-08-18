@@ -107,8 +107,7 @@ chmod a-r File 	=> this will remove read from everyone in the file
 chmod a-wx File	=> this will remove write and executable form for everyone in the file
 chmod o-r File	=> this will remove read to everyone
 
-File Ownership
-
+FILE OWNERSHIP
 
  Two owners for file or directory
    User
@@ -127,3 +126,67 @@ Recursive ownership options (cascade)
    rw-r--r--    1 psbatch  staff      6049 Mar  9  2020 VOLTAGE.sql
  chgrp  psbatch VOLTAGE.sql
    rw-r--r--    1 dfi303  psbatch     6049 Mar  9  2020 VOLTAGE.sql
+
+HELP COMMANDS
+
+There are three types of help commands
+whatis =>  used to offer a one-line overview of command, option, or a flag.
+help => simplest way to get information regarding a built-in shell command. It helps you fetch information from the shell's internal documentation
+man =>	manual  is the simplest way to get information regarding a built-in shell command. It helps you fetch information from the shell's internal documentation
+
+
+How to run the command :
+
+ whatis  [command]
+   ex :  whatis cd
+     cd(ntcl)      - Change working directory
+ [command]  - - help
+   ex :  ls —help
+
+ man  command
+   ex : man pwd
+NAME
+ pwd -- return working directory name
+SYNOPSIS
+    pwd [-L | -P]
+DESCRIPTION
+    The pwd utility writes the absolute pathname of the current working directory to the standard output.
+    Some shells may provide a builtin pwd command which is similar or identical to this utility.  Consult the builtin(1) manual page.
+    The options are as follows:
+    -L      Display the logical current working directory.
+    -P      Display the physical current working directory (all symbolic links resolved).
+    If no options are specified, the -L option is assumed.
+
+ADDING TEXT TO FILES
+
+3 simple ways to add text to a file
+vi
+Redirect command output > or >>
+echo > or. >>
+
+echo “text” > File
+
+ First create a file :
+   touch test.txt
+ example :
+    echo “this is a test” > test.txt
+
+ View File :
+    cat test.txt
+
+ 88e9fe660ca1:~ dfi303$ touch test.txt
+ 88e9fe660ca1:~ dfi303$ echo "this is a test " > test.txt
+ 88e9fe660ca1:~ dfi303$ cat test.txt
+ this is a test
+
+Redirect command output > or >>
+
+ Adding date to the files about
+ date >> test.txt
+
+     88e9fe660ca1:~ dfi303$ date
+Mon Apr 25 23:04:19 EDT 2022
+88e9fe660ca1:~ dfi303$ date >> test.txt
+88e9fe660ca1:~ dfi303$ cat test.txt
+this is a test
+Mon Apr 25 23:04:29 EDT 2022
