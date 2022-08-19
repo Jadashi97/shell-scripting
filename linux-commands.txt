@@ -190,3 +190,53 @@ Mon Apr 25 23:04:19 EDT 2022
 88e9fe660ca1:~ dfi303$ cat test.txt
 this is a test
 Mon Apr 25 23:04:29 EDT 2022
+
+
+FILE MAINTENANCE COMMANDS
+
+cp
+rm
+mv
+mkdir
+rmdir or rm -r
+chgrp
+chown
+chmod
+
+FILE DISPLAY COMMANDS
+
+ more.      One Page at a time           more [commad]
+ less.        Few Lines at a time           less [command].     Allows you to go up and down using arrow keys
+ cat          View whole file
+ head 	Few lines at the top of the file               head -2 [command]
+ tail		Last lines at the end of the file              tail -2 [command]
+
+
+awk	   will give you only first column of thee file
+    awk  ‘{print $1}’  [File]      this will print out first column in your file
+    awk  ‘{print $2}’  [File]     this will print out second column in your file
+    cat  [File] | awk  ‘{print $1}’  > [newFile].  This will open the file and print the first column and will save it to a new file
+
+grep.  This works as a search function for linux
+      grep [word or sentence] [file or directory].
+      grep test test.txt => this will print out any line that has the word “test” with in the test.txt file
+ 
+sort.    This will sort file in alphabetic order
+     sort [file]          this will sort in alphabetic order
+     sort -r [file] 	  this will sort in reverse order
+
+cat [filename] | awk ‘{print $2}’ | sort | uniq   =>here the file will open and then we are looking at the second column then we sort and delete any duplicate lines
+
+ wc.     This is a word count counts words inside the file
+
+   wc [file]                        this will give you word count    ( Lines, words, Letters/characters)
+   cat [file]  | wc -l.          This will only count the lines
+
+Compare File
+
+ diff      compares the file line by line
+ cmp     byte by byte
+
+man.   = manual, use this to get more description for anything you don’t understand in linux
+
+Example    man cd 
